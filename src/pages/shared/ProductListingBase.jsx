@@ -49,12 +49,10 @@ export default function ProductListingBase({
         </aside>
 
         <div>
-          <div className="mb-3 flex items-center justify-between gap-3">
-            {!mobileFiltersOpen && (
-              <p className="text-sm text-slate-500">
-                {loading ? "Loading..." : `${filtered.length} product${filtered.length === 1 ? "" : "s"} found`}
-              </p>
-            )}
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+            <p className="text-sm text-slate-500">
+              {loading ? "Loading..." : `${filtered.length} product${filtered.length === 1 ? "" : "s"} found`}
+            </p>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setMobileFiltersOpen(true)}
